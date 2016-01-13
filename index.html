@@ -1,111 +1,716 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
-<html lang="en" manifest="cache.appcache">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Make and Play Udacity 2048</title>
+	<title>Smriti Singh</title>
+	<!--fonts-->
+		<link href='//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+		<link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<!--//fonts-->
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- for-mobile-apps -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Kong Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //for-mobile-apps -->
+	<!-- js -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!-- js -->
+	<!-- start-smooth-scrolling -->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+	<!-- start-smooth-scrolling -->
 
-  <link href="style/main.css" rel="stylesheet" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="keywords" content="HTML,CSS,Javascript,Make your own 2048,Play 2048">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
-  <meta name="format-detection" content="telephone=no" />
-
-  <meta property="og:title" content="2048 game"/>
-  <meta property="og:site_name" content="2048 game"/>
-  <meta property="og:description" content="Play Udacity 2048. Then, make your own 2048 game in Udacity's 2 hour mini course for programming beginners!"/>
-  <meta property="og:image" content="http://gabrielecirulli.github.io/2048/meta/og_image.png"/>
 </head>
 <body>
-  <div class="container">
-    <div class="heading">
-      <h1 class="title">Make 2048</h1>
-      <div class="scores-container">
-        <div class="score-container">0</div>
-        <div class="best-container">0</div>
-      </div>
-    </div>
+<!-- banner -->
+<div class="banner" id="home">
+	<div class="container"> 
+		<div class="top-header row">
+			<script src="js/classie.js"></script>
+			<!--top-nav---->
 
-    <div class="above-game">
-      <p class="game-intro">
-      <a class="restart-button">New Game</a>
-      Use the arrow keys to slide  tiles. Combine similar tiles to create new ones.</p>
-      
-    </div>
+			<div class="top-nav">
+				<div class="nav-icon">
+					    <a href="#" class="right_bt" id="activator"><span> </span> </a>
+				</div>
+				<div class="box" id="box">
+					<div class="box_content">        					                         
+						<div class="box_content_center">
+							<div class="form_content">
+								<div class="menu_box_list">
+									<ul>
+										<li><a class="scroll" href="#home"><span>home</span></a></li>
+										<li><a class="scroll" href="#about"><span>about</span></a></li>
+										<li><a class="scroll" href="#services"><span>services</span></a></li>
+										<li><a class="scroll" href="#portfolio"><span>portfolio</span></a></li>
+										<li><a class="scroll" href="#testimonial"><span>Testimonial</span></a></li>
+										<li><a class="scroll" href="#blog"><span>blog</span></a></li>
+										<li><a class="scroll" href="#contact"><span>Contact</span></a></li>
+										<div class="clearfix"> </div>
+									</ul>
+								</div>
+								<a class="boxclose" id="boxclose"> <span> </span></a>
+							</div>                                  
+						</div> 	
+					</div> 
+				</div>       	  
+			</div>
+			<!---start-click-drop-down-menu----->
+			        <!----start-dropdown--->
+			         <script type="text/javascript">
+						var $ = jQuery.noConflict();
+							$(function() {
+								$('#activator').click(function(){
+									$('#box').animate({'top':'0px'},900);
+								});
+								$('#boxclose').click(function(){
+								$('#box').animate({'top':'-1000px'},900);
+								});
+							});
+							$(document).ready(function(){
+							//Hide (Collapse) the toggle containers on load
+							$(".toggle_container").hide(); 
+							//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+							$(".trigger").click(function(){
+								$(this).toggleClass("active").next().slideToggle("slow");
+									return false; //Prevent the browser jump to the link anchor
+							});
+												
+						});
+					</script>
+			<!---//End-click-drop-down-menu----->
+			<div class="clearfix"> </div>
+		</div>
+		<div class="banner-info">
+			<div class="banner-left">
+				<img src="images/1.JPG" height="400" width="300" alt=""/>
+			</div>
+			<div class="banner-right">
+				<h1>SMRITI SINGH</h1>
+				<div class="border"></div>
+				<h2>Software Engineer</h2>
+				<a href="Resume.pdf">DOWNLOAD MY RESUME</a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--/header-banner-->
+<!--about-->
+<div class="about text-center" id="about">
+	<div class="container">
+		<h3>ABOUT ME</h3>
+		<div class="strip text-center"><img src="images/about.png" alt=" "/></div>
+		<p>Hi! I am a student of Computer Science from National Institute of Technology, Rourkela. I can be called a technology enthusiast. I like to constantly challenge myself to learn new skills and push myself to newer boundaries. I love meeting new people, esp with people sharing similar passion and dreams and who are motivating. Currently, I work as a Software Engineer in Teradata R&D India. I was introduced to Computer Science and Programming in school, the fact that I could use a few lines of code to be able to solve almost any mathematical problem, left quite an impression on me. My love for the digital world has grown exponentially ever since.
 
+</p>
+		<ul>
+			<li><a class="fb" href="https://www.facebook.com/smritisingh22"></a></li>
+			<li><a class="twit" href="https://twitter.com/smritisingh2208"></a></li>
+			<li><a class="in" href="https://in.linkedin.com/in/smriti-singh-77715b43"></a></li>
+			<li><a class="goog" href="https://plus.google.com/+smritisingh"></a></li>
+		</ul>
+	</div>
+</div>
+<!--//about-->
+<div class="about-back"></div>
+<!--my skill-->
+<div class="my-skills text-center">
+	<div class="container">
+		<h3>MY SKILLS</h3>
+		<div class="strip text-center"><img src="images/skill.png" alt=" "/></div>
+		<div class="skill-grids">
+					<div class="col-md-2 skills-grid text-center">
+						<div class="circle" id="circles-1"></div>
+						<p>C/C++</p>
+					</div>
+					<div class="col-md-2 skills-grid text-center">
+						<div class="circle" id="circles-2"></div>
+						<p>Python</p>
+					</div>
+					<div class="col-md-2 skills-grid text-center">
+						<div class="circle" id="circles-3"></div>
+						<p>SQL</p>
+					</div>
+					<div class="col-md-2 skills-grid text-center">
+						<div class="circle" id="circles-4"></div>
+						<p>Html 5 / CSS 3</p>
+					</div>
+					<div class="col-md-2 skills-grid text-center">
+						<div class="circle" id="circles-5"></div>
+						<p>ML</p>
+					</div>
+					<div class="clearfix"> </div>
+				 <script type="text/javascript" src="js/circles.js"></script>
+					         <script>
+								var colors = [
+										['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff']
+									];
+								for (var i = 1; i <= 7; i++) {
+									var child = document.getElementById('circles-' + i),
+										percentage = 30 + (i * 10);
+										
+									Circles.create({
+										id:         child.id,
+										percentage: percentage,
+										radius:     80,
+										width:      10,
+										number:   	percentage / 1,
+										text:       '%',
+										colors:     colors[i - 1]
+									});
+								}
+						
+				</script>
+		</div>
+	</div>	
+</div>
+<!--//my skill-->
+<div class="my-skill-back"></div>
+<!--education-->
+<div class="education text-center">
+	<div class="container">
+		<div class="edu-info">
+			<h3>EDUCATION</h3>
+		</div>
+		<div class="strip text-center"><img src="images/edu.png" alt=" "/></div>
+		<div class="edu-grids">
+			<div class="col-md-4 edu-grid">
+				<p>2014 - 2015</p><span>M.Tech.</span>
+				<img src="images/arrow.png" alt=""/>
+				<div class="edu-border">
+					<div class="edu-grid-master">
+						<h3>MASTERS DEGREE IN COMPUTER SCIENCE</h3>
+						<h4>National Institute of Technology, Rourkela</h4>
+					</div>
+					<div class="edu-grid-info">
+						<h5>Secured a CGPA of 8.92/10 with a second position in class. Thesis titled "Improved Techniques for Review Spam Detection".</h5>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 edu-grid">
+				<p>2010-2014</p><span>B.Tech.</span>
+				<img src="images/arrow.png" alt=""/>
+				<div class="edu-border">
+					<div class="edu-grid-master">
+						<h3>BACHELOR DEGREE IN COMPUTER SCIENCE</h3>
+						<h4>National Institute of Technology, Rourkela</h4>
+					</div>
+					<div class="edu-grid-info">
+						<h5>Secured a CGPA of 8.92/10 with a second position in class.</h5>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 edu-grid">
+				<p>2007 - 2010</p><span>Class XII & X</span>
+				<img src="images/arrow.png" alt=""/>
+				<div class="edu-border">
+					<div class="edu-grid-master">
+						<h3>AISSCE, CBSE</h3>
+						<h4>DAV Chandrasekharpur and St. Xavier's, Khandagiri</h4>
+					</div>
+					<div class="edu-grid-info">
+						<h5>Secured 94.4% at the Senior Secondary School examination and 93.4% at the Secondary School examination</h5>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	
+</div>
+<!--//education-->
+<div class="strip-border"><p></p></div>
+<!--work-->
+<div class="work-experience text-center">
+	
+	<div class="container">
+		<div class="work-info">
+			<h3>EXPERIENCE</h3>
+		</div>
+		<div class="strip text-center"><img src="images/work.png" alt=" "/></div>
+		<div class="work-grids">
+			<div class="col-md-4 w-grid">
+				<div class="work-grid">
+					<h3>June 2015 - Now</h3>
+					<div class="work-grid-info">
+						<h4>Teradata R&D</h4>
+						<h5>Software Engineer</h5>
+						<p>
+							Worked in QueryGrid team, designing of optimised connectors of different database ecosystems such as teradata, hadoop, oracle, etc. I have became well versed with advanced C/C++ programming, shell scripting and tools like eclipse and gdb. 
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 w-grid">
+				<div class="work-grid">
+					<h3>May - June 2013</h3>
+					<div class="work-grid-info">
+						<h4>Virtual Labs</h4>
+						<h5>Lab Developer - Software Stream</h5>
+						<p>
+Create Lab Developer Kit (API tools) for an Indian govt driven educational website  http://www.virtual-labs.ac.in/ (on the likes of Udacity, Coursera, etc). Ended up learning many web tools as well as working with PHP, MySQL and Javascript. 
 
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 w-grid">
+				<div class="work-grid">
+					<h3>Dec 2012</h3>
+					<div class="work-grid-info">
+						<h4>IPTSE Winter School</h4>
+						<h5>Research Intern</h5>
+						<p>
+Worked on the “Analysis of State’s education systems using Data Mining techniques” under the supervision of Prof. Bhiksha Raj and Prof. Rita Singh from Carnegie Mellon University. Gained familiarity with Machine Learning and some ML tools such as Weka, LightSide, etc
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--//work-->
+<div class="services-back"></div>
 
+<!--services-->
+<div class="services text-center" id="services">
+	<div class="container">
+		<div class="ser-info">
+			<h3>INTERESTS</h3>
+		</div>
+		<div class="strip text-center"><img src="images/ser.png" alt=" "/></div>
+		<div class="ser-grids">
+			<div class="col-md-3 ser-grid">
+				<div class="ser-imagea"></div>
+				<h3>Software Development</h3>
+				<p>Interested in problem solving, a decent programmer and flexible to any of the programming languages.</p>
+			</div>
+			<div class="col-md-3 ser-grid">
+				<div class="ser-imaged"></div>
+				<h3>Programming</h3>
+				<p>I spend my weekends either doing competitive programming or learning a new computer language for fun. My love for Kaggle has grown exponentially. </p>
+			</div>
+			<div class="col-md-3 ser-grid">
+				<div class="ser-imagec"></div>
+				<h3>Data Analysis and Research</h3>
+				<p>Always interested in working on research problems pertaining to ML and NLP, and figuring out real world applications. Discovering patterns and insights from the data, mixing ML knowledge with programming skills.</p>
+			</div>
 
-    <div class="game-container">
-      <div class="game-message">
-        <p></p>
-        <div class="lower">
-	        <a href="http://www.udacity.com/course/ud248/"class="learn learn-low">Take the Class!</a>
-          <a class="retry-button">Play Again</a>
-          <div class="score-sharing"></div>
-        </div>
-      </div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--//services-->
+<!--portfolio-->
+<div class="gallery-section text-center" id="portfolio">
+	<div class="container">
+		<h3>PROJECTS</h3>
+		<div class="strip text-center"><img src="images/port.png" alt=" "/></div>
+		<p>Some of the projects I have done: </p>
+		<div class="gallery-grids">
+			<div class="top-gallery">
+				<div class="col-md-4 gallery-grid gallery1">
+					<a href="images/p1.jpg" class="swipebox"><img src="images/p1.jpg" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>Improved Techniques for Review Spam Detection</h4>
+							<div class="button"><a href="images/p1.jpg" class="swipebox">VIEW</a></div>
+						</div>
+				</div></a>
+				<div class="col-md-4 gallery-grid gallery1">
+					<a href="images/p2.jpg" class="swipebox"><img src="images/p2.jpg" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>Construct based Sentiment Analysis Model</h4>
+							<div class="button"><a href="images/p2.jpg" class="swipebox">VIEW</a></div>
+						</div>
+				</div></a>
+				<div class="col-md-4 gallery-grid gallery1">
+					<a href="images/p3.jpg" class="swipebox"><img src="images/p3.jpg" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>Virtual Labs - API toolkit development</h4>
+							<div class="button"><a href="images/p3.jpg" class="swipebox">VIEW</a></div>
+						</div>
+				</div></a>
+				<div class="col-md-4 gallery-grid gallery1">
+					<a href="images/p4.jpg" class="swipebox"><img src="images/p4.jpg" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>Analysis of States education systems using Data Mining techniques</h4>
+							<div class="button"><a href="images/p4.jpg" class="swipebox">VIEW</a></div>
+						</div>
+				</div></a>
+				<div class="col-md-4 gallery-grid gallery1">
+					<a href="images/p5.jpg" class="swipebox"><img src="images/p5.jpg" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>Meme 2048</h4>
+							<div class="button"><a href="images/p5.jpg" class="swipebox">VIEW</a></div>
+						</div>
+				</div></a>
+				<div class="col-md-4 gallery-grid gallery1">
+					<a href="images/p6.jpg" class="swipebox"><img src="images/p6.jpg" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>Project Name</h4>
+							<p>WEB DESIGN</p>
+							<div class="button"><a href="images/p6.jpg" class="swipebox">VIEW</a></div>
+						</div>
+				</div></a>
+				<div class="clearfix"> </div>
+			</div>
+				<link rel="stylesheet" href="css/swipebox.css">
+				<script src="js/jquery.swipebox.min.js"></script> 
+					<script type="text/javascript">
+						jQuery(function($) {
+							$(".swipebox").swipebox();
+						});
+					</script>
+		</div>
+	</div>
+</div>
+<!--//portfolio-->
+<!--process-->
+<div class="process text-center">
+	<div class="container">
+		<h3>ACHIEVEMENTS</h3><p>My achievements of college days:</p>
+		<div class="strip text-center"><img src="images/pro.png" alt=" "/></div>
+		<div class="process-girds">
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imagea"></div>
+					<p>Google Student Ambassador</p>
+					<img src="images/6.png" alt=""/>
+				</div>
+			</div>
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imageb"></div>
+					<p>Head Placement Coordinator</p>
+					<img class="pro-imga" src="images/6.png" alt=""/>
+				</div>
+			</div>
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imagec"></div>
+					<p>Microsoft Student Partner</p>
+					<img class="pro-img" src="images/6.png" alt=""/>
+				</div>
+			</div>
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imaged"></div>
+					<p>GATE scholarship</p>
+					<img class="pro-imgb" src="images/6.png" alt=""/>
+				</div>
+			</div>
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imagee"></div>
+					<p>Head - Tech Club and Rotaract CLub</p>
+					<img src="images/6.png" alt=""/>
+				</div>
+			</div>
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imagef"></div>
+					<p>Member - Swimming team</p>
+					
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--//process-->
+<div class="process-back"></div>
+<!--testimonials-->
+<div class="testimonials" id="testimonial">
+	<div class="container">
+		<h3>PUBLICATIONS</h3>
+		<div class="strip text-center"><img src="images/test.png" alt=" "/></div>
+			<!-- responsiveslides -->
+					<script src="js/responsiveslides.min.js"></script>
+						<script>
+							// You can also use "$(window).load(function() {"
+							$(function () {
+							 // Slideshow 4
+							$("#slider3").responsiveSlides({
+								auto: true,
+								pager: false,
+								nav: true,
+								speed: 500,
+								namespace: "callbacks",
+								before: function () {
+							$('.events').append("<li>before event fired.</li>");
+							},
+							after: function () {
+								$('.events').append("<li>after event fired.</li>");
+								}
+								});
+								});
+						</script>
+			<!-- responsiveslides -->
+			<div  id="top" class="callbacks_container">
+					<ul class="rslides" id="slider3">
+						<li>
+							<div class="test-banner">
+								<img class="quoa" src="images/quo2.png" alt=""/>
+								<div class="test-left">
+									<img src="images/7.png" alt=""/>
+								</div>
+								<div class="test-right">
+									<p>Construct based Sentiment Analysis Model</p>
+									<h4>Smriti Singh, Jitendra Rout, Sanjay Kumar Jena : ICSNCS 2016</h4>
+								</div>
+								<div class="clearfix"></div>
+								<img class="quo" src="images/quo1.png" alt=""/>
+							</div>
+						</li>
+						<li>
+							<div class="test-banner">
+								<img class="quoa" src="images/quo2.png" alt=""/>
+								<div class="test-left">
+									<img src="images/eee.png" alt=""/>
+								</div>
+								<div class="test-right">
+									<p>Online Review Spam Detection using Supervised Learning Approach</p>
+									<h4>Smriti Singh, Jitendra Rout, Sanjay Kumar Jena : NEUCOM</h4>
+								</div>
+								<div class="clearfix"></div>
+								<img class="quo" src="images/quo1.png" alt=""/>
+							</div>
+						</li>
+					</ul>
+			</div>
+			
+	</div>
+</div>
+<!--testimonials-->
 
-      <div class="grid-container">
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-      </div>
+<div class="client-back"></div>
+<!--blog-->
+<div class="blog" id="blog">
+	<div class="container">
+		<div class="blog-info text-center">
+			<h3>BLOG</h3>
+			<div class="strip text-center"><img src="images/blog.png" alt=" "/></div>
+		</div>
+		<div class="blog-grids">
+			<div class="col-md-4 blog-text-info">
+				<div class="blog-grid">
+					<a href="single.html"><img src="images/a.jpg" alt=""/></a>
+					<div class="blog-text">
+						<a href="single.html">Nature is lethal but it doesn't hold a candle to man.</a>
+						<div class="stripa"></div>
+						<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria 
+						and viruses differently than mine. You don't get sick, I do.</p>
+					</div>
+				
+					<div class="blog-para">
+							<ul>
+								<li><a href="#">3 Comments</a></li>
+								<li><a href="#">8 Share</a></li>
+							</ul>
+					</div>	
+					<div class="blog-pos">
+						<p>5<span>May</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 blog-text-info">
+				<div class="blog-grid">
+					<a href="single.html"><img src="images/b.jpg" alt=""/></a>
+					<div class="blog-text">
+						<a href="single.html">Nature is lethal but it doesn't hold a candle to man.</a>
+						<div class="stripa"></div>
+						<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria 
+						and viruses differently than mine. You don't get sick, I do.</p>
+					</div>
+				
+					<div class="blog-para">
+							<ul>
+								<li><a href="#">3 Comments</a></li>
+								<li><a href="#">8 Share</a></li>
+							</ul>
+					</div>
+					<div class="blog-pos">
+						<p>5<span>May</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 blog-text-info">
+				<div class="blog-grid">
+					<a href="single.html"><img src="images/c.jpg" alt=""/></a>
+					<div class="blog-text">
+						<a href="single.html">Nature is lethal but it doesn't hold a candle to man.</a>
+						<div class="stripa"></div>
+						<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria 
+						and viruses differently than mine. You don't get sick, I do.</p>
+					</div>
+				
+					<div class="blog-para">
+							<ul>
+								<li><a href="#">3 Comments</a></li>
+								<li><a href="#">8 Share</a></li>
+							</ul>
+					</div>
+					<div class="blog-pos">
+						<p>5<span>May</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 blog-text-info">
+				<div class="blog-grid">
+					<a href="single.html"><img src="images/a.jpg" alt=""/></a>
+					<div class="blog-text">
+						<a href="single.html">Nature is lethal but it doesn't hold a candle to man.</a>
+						<div class="stripa"></div>
+						<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria 
+						and viruses differently than mine. You don't get sick, I do.</p>
+					</div>
+				
+					<div class="blog-para">
+							<ul>
+								<li><a href="#">3 Comments</a></li>
+								<li><a href="#">8 Share</a></li>
+							</ul>
+					</div>
+					<div class="blog-pos">
+						<p>5<span>May</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 blog-text-info">
+				<div class="blog-grid">
+					<a href="single.html"><img src="images/b.jpg" alt=""/></a>
+					<div class="blog-text">
+						<a href="single.html">Nature is lethal but it doesn't hold a candle to man.</a>
+						<div class="stripa"></div>
+						<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria 
+						and viruses differently than mine. You don't get sick, I do.</p>
+					</div>
+				
+					<div class="blog-para">
+							<ul>
+								<li><a href="#">3 Comments</a></li>
+								<li><a href="#">8 Share</a></li>
+							</ul>
+					</div>
+					<div class="blog-pos">
+						<p>5<span>May</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 blog-text-info">
+				<div class="blog-grid">
+					<a href="single.html"><img src="images/c.jpg" alt=""/></a>
+					<div class="blog-text">
+						<a href="single.html">Nature is lethal but it doesn't hold a candle to man.</a>
+						<div class="stripa"></div>
+						<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria 
+						and viruses differently than mine. You don't get sick, I do.</p>
+					</div>
+				
+					<div class="blog-para">
+							<ul>
+								<li><a href="#">3 Comments</a></li>
+								<li><a href="#">8 Share</a></li>
+							</ul>
+					</div>
+					<div class="blog-pos">
+						<p>5<span>May</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--//blog-->
+<div class="contact-back"></div>
+<!--contact-->
+<div class="contact" id="contact">
+	<div class="container">
+		<div class="contact-info text-center">
+			<h3>CONTACT</h3>
+			<div class="strip text-center"><img src="images/con1.png" alt=" "/></div>
+		</div>
+		<div class="contact-grids">
+			<div class="col-md-5 contact-left">
+				<h3>Say Hi to Me</h3>
+				<div class="stripb"></div>
+				<ul>
+					<li>Madhapur, </li>
+					<li>Hyderabad </li>
+					<li>Telangana, India - 500081</li>
+					<li>7894123101</li>
+					<li><a href="mailto:smritisingh22@gmail.com">smritisingh22@gmail.com</a></li>
 
-      <div class="tile-container">
+				</ul>
+			</div>
+			<div class="col-md-7 contact-right">
+				<h3>Drop Me A Line</h3>
+				<div class="stripb"></div>
+				<form>
+					<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+					<input type="text" value="E-mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail';}" required="">
+					<textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}" required="">Message</textarea>
+					<input type="submit" value="SEND">
+				</form>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--//contact-->
+<div class="footer-top"></div>
+<!--resume-->
+<div class="resume text-center">
+	<div class="container">
+		<div class="strip text-center"><a href="#"><img src="images/down.png" alt=" "/></a></div>
+		<div class="down"><a href="Resume.pdf">Download My Resume</a></div>
+	</div>
+</div>
+<!--//resume-->
 
-      </div>
-    </div>
-
-
-    <hr>
-    <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same value touch, they <strong>merge into one!</strong>
-    </p>
-    <hr>
-    <p>
-    This is a modified version of the <a href="http://gabrielecirulli.github.io/2048/" target="_blank">original game</a> created by Gabriele Cirulli.
-    </p>
-  </div>
-
-  <script src="js/bind_polyfill.js"></script>
-  <script src="js/classlist_polyfill.js"></script>
-  <script src="js/animframe_polyfill.js"></script>
-  <script src="js/keyboard_input_manager.js"></script>
-  <script src="js/html_actuator.js"></script>
-  <script src="js/grid.js"></script>
-  <script src="js/tile.js"></script>
-  <script src="js/local_storage_manager.js"></script>
-  <script src="js/game_manager.js"></script>
-  <script src="js/application.js"></script>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
+<!--footer-->
+<div class="footer">
+	<div class="container">
+		<p>CYA</a></p>
+	</div>
+</div>
+<!--//footer-->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
 </body>
 </html>
